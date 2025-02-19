@@ -1,0 +1,405 @@
+$red: #FF3535
+$gray: #F7F7F7
+$white: #FFFFFF
+$black: #262626
+    
+.container
+    max-width: 1440px
+    width: 100%
+    margin: 0 auto
+    color: $black
+
+    @media (max-width: 1920px)
+        max-width: 75vw
+
+    @media (max-width: 1200px)
+        max-width: 90vw
+
+.title
+    font-size: 36px
+    font-weight: 700
+    line-height: 43.2px
+    letter-spacing: 0
+    margin: 71px 0 89px 314px
+
+    @media (max-width: 1920px)
+        font-size: 1.875vw
+        line-height: 2.24vw
+        margin: 3.698vw 0 4.635vw 16.354vw
+
+    @media (max-width: 1200px)
+        margin: 4vw auto 5vw auto
+        text-align: center
+        line-height: normal
+        
+    @media (max-width: 770px)
+        font-size: 7.467vw
+        text-align: left
+
+li::marker
+    color: $red
+    font-size: 14px
+
+    @media (max-width: 1920px)
+        font-size: 0.729vw
+
+    @media (max-width: 1200px)
+        font-size: .9vw
+
+    @media (max-width: 770px)
+        font-size: 4vw
+
+.programs__list
+    max-width: 1256px
+    width: 100%
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    gap: 68px
+
+    @media (max-width: 1920px)
+        max-width: 65.417vw
+        gap: 3.542vw
+
+    @media (max-width: 1200px)
+        max-width: 80vw
+        gap: 5vw
+
+    @media (max-width: 770px)
+        max-width: 90vw
+        gap: 9.067vw
+
+    .program__title
+        font-size: 26px
+        font-weight: 700
+        line-height: 31.2px
+        letter-spacing: 0
+        margin-bottom: 54px
+
+        @media (max-width: 1920px)
+            font-size: 1.354vw
+            line-height: 1.615vw
+            margin-bottom: 2.813vw
+
+        @media (max-width: 1200px)
+            font-size: 1.6vw
+            line-height: normal
+            margin-bottom: 3vw
+
+        @media (max-width: 770px)
+            font-size: 5.867vw
+            margin-bottom: 7.2vw
+    
+    .modules
+        display: flex
+        gap: 45px
+
+        @media (max-width: 1920px)
+            gap: 2.344vw
+
+        @media (max-width: 1200px)
+            gap: 3vw
+
+        @media (max-width: 770px)
+            flex-direction: column
+            gap: 4vw
+
+        .module
+            display: flex
+            justify-content: space-between
+            width: 100%
+            padding-top: 30px
+            position: relative
+
+            @media (max-width: 1920px)
+                padding-top: 1.563vw
+
+            @media (max-width: 1200px)
+                padding-top: 2vw
+
+            @media (max-width: 770px)
+                flex-direction: column
+                padding-top: 0
+            
+            &:first-child
+                max-width: 595px
+
+                @media (max-width: 1920px)
+                    max-width: 30.99vw
+
+                @media (max-width: 1200px)
+                    max-width: none
+
+            &::after
+                content: ""
+                position: absolute
+                top: -2px
+                left: 0
+                width: 140px
+                height: 2px
+                background: $red
+
+                @media (max-width: 1920px)
+                    width: 7.292vw
+
+                @media (max-width: 1200px)
+                    width: 9vw
+
+                @media (max-width: 770px)
+                    display: none
+
+            .module__index
+                font-size: 32px
+                line-height: 38.4px
+                font-weight: 400
+                letter-spacing: 0
+                transition: .3s
+
+                @media (max-width: 1920px)
+                    font-size: 1.667vw
+                    line-height: 1.979vw
+
+                @media (max-width: 1200px)
+                    font-size: 2vw
+                    line-height: normal
+
+                @media (max-width: 770px)
+                    display: flex
+                    align-items: center
+                    gap: 7.2vw
+                    font-size: 4.8vw
+                    padding: 3.733vw 6.4vw
+                    background: $gray
+                    font-weight: 300
+                    cursor: pointer
+                
+                .plus__container
+                    overflow: hidden
+                    position: relative
+                    transition: background 0.4s, max-height 0.2s ease-out
+                    border-radius: 2px
+                    background: $gray
+
+                    @media (max-width: 770px)
+                        width: 4.8vw
+                        height: 4.8vw
+                        max-height: 4.8vw
+                        
+                    .plus
+                        display: none
+
+                        @media (max-width: 770px)
+                            display: block
+                            opacity: 1
+                            position: absolute
+                            top: 0
+                            left: 0
+                            width: 4.8vw
+                            height: 4.8vw
+
+                .minus
+                    display: none
+
+                    @media (max-width: 770px)
+                        width: 4.8vw
+                        height: 4.8vw
+
+                &.active
+                    @media (max-width: 770px)
+                        background: $red
+                        color: $white
+
+                        .plus__container
+                            max-height: 0.533vw
+                            background: $white
+
+                            .plus
+                                display: none
+
+                        .minus
+                            display: block
+
+            .skills
+                margin-top: 5px
+                display: flex
+                flex-direction: column
+                gap: 10px
+                max-width: 353px
+                font-weight: 300
+                transition: .3s
+
+                @media (max-width: 1920px)
+                    margin-top: 0.26vw
+                    gap: 0.521vw
+                    max-width: 18.385vw
+
+                @media (max-width: 1200px)
+                    margin-top: 0.5vw
+                    gap: 1vw
+                    max-width: 22vw
+
+                @media (max-width: 770px)
+                    padding-left: 4.333vw
+                    max-width: none
+                    margin-top: 0
+                    overflow: hidden
+                    display: none
+
+                    &.active
+                        padding-top: 4.533vw
+                        display: block
+
+                .skill
+                    font-size: 16px
+
+                    @media (max-width: 1920px)
+                        font-size: 0.833vw
+
+                    @media (max-width: 1200px)
+                        font-size: 1.2vw
+                        line-height: normal
+
+                    @media (max-width: 770px)
+                        font-size: 4vw
+                        line-height: 5.067vw
+
+.info__section
+    display: flex
+    gap: 30px
+    margin: 131px auto 171px auto
+
+    @media (max-width: 1920px)
+        gap: 1.563vw
+        margin: 6.823vw auto 8.906vw auto
+
+    @media (max-width: 1200px)
+        gap: 2vw
+
+    @media (max-width: 770px)
+        flex-direction: column
+        margin: 11.733vw auto 12.533vw auto
+        gap: 6.133vw
+
+    .info__block
+        width: 100%
+        color: $white
+        height: 293px
+
+        @media (max-width: 1920px)
+            height: 15.26vw
+
+        @media (max-width: 1200px)
+            height: 18vw
+
+        @media (max-width: 770px)
+            height: auto
+
+        .info__title
+            font-size: 36px
+            line-height: 43.2px
+            font-weight: 700
+            margin-bottom: 24px
+
+            @media (max-width: 1920px)
+                font-size: 1.875vw
+                line-height: 2.24vw
+                margin-bottom: 1.25vw
+
+            @media (max-width: 1200px)
+                font-size: 2.4vw
+                line-height: normal
+
+            @media (max-width: 770px)
+                font-size: 6.4vw
+                line-height: 8vw
+                margin-bottom: 6.667vw
+
+        .text
+            font-size: 20px
+            line-height: 26px
+            font-weight: 300
+            letter-spacing: 0
+
+            @media (max-width: 1920px)
+                font-size: 1.042vw
+                line-height: 1.354vw
+
+            @media (max-width: 1200px)
+                font-size: 1.3vw
+                line-height: normal
+
+            @media (max-width: 770px)
+                font-size: 5.333vw
+                line-height: 6.933vw
+
+        &.left
+            padding: 56px 60px 0 72px
+            background: $red
+            position: relative
+
+            @media (max-width: 1920px)
+                padding: 2.917vw 3.125vw 0 3.75vw
+
+            @media (max-width: 770px)
+                padding: 8.267vw 4.533vw 10.933vw 4.533vw
+
+            .text
+                width: 450px
+
+                @media (max-width: 1920px)
+                    width: 23.438vw
+
+                @media (max-width: 1200px)
+                    width: 27vw
+
+                @media (max-width: 770px)
+                    width: auto
+
+            .triangle
+                position: absolute
+                top: 0
+                right: 0
+                width: 0
+                height: 0
+                border-bottom: 43px solid #CD1800
+                border-right: 43px solid $white
+
+
+                @media (max-width: 1920px)
+                    border-bottom: 2.24vw solid #CD1800
+                    border-right: 2.24vw solid $white
+
+                @media (max-width: 1200px)
+                    border-bottom: 2.5vw solid #CD1800
+                    border-right: 2.5vw solid $white
+
+                @media (max-width: 770px)
+                    border-bottom: 6.933vw solid #CD1800
+                    border-right: 6.933vw solid $white
+
+        &.right
+            padding: 52px 56px 0 57px
+            background: #2D2C2A
+
+            @media (max-width: 1920px)
+                padding: 2.708vw 2.917vw 0 2.969vw
+
+            @media (max-width: 770px)
+                padding: 8.267vw 6.4vw 16.533vw 6.4vw
+
+            .text
+                padding-left: 20px
+                display: flex
+                flex-direction: column
+                gap: 10px
+
+                @media (max-width: 1920px)
+                    padding-left: 1.042vw
+                    gap: 0.521vw
+
+                @media (max-width: 1200px)
+                    gap: .7vw
+
+                @media (max-width: 770px)
+                    padding-left: 4.5vw
+                    gap: 4vw
