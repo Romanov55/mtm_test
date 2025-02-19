@@ -309,11 +309,14 @@ li::marker {
     max-width: none;
     margin-top: 0;
     overflow: hidden;
-    display: none;
+    height: 0;
+    opacity: 0;
+    transition: height 0.4s ease-out, opacity 0.4s ease-out, padding-top 0.4s ease-out;
   }
   .programs__list .modules .module .skills.active {
     padding-top: 4.533vw;
-    display: block;
+    height: auto;
+    opacity: 1;
   }
 }
 .programs__list .modules .module .skills .skill {
